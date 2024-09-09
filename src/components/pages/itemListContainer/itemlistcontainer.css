@@ -1,0 +1,10 @@
+div h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
