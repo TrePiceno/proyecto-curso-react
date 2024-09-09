@@ -3,7 +3,7 @@ import Badge from "@mui/material/Badge";
 const CartWidget = () => {
     return (
         <div>
-            <Badge badgeContent={100} color="warning" font>
+            <Badge badgeContent={100} color="warning">
                 <AddShoppingCartIcon fontSize="large" />
             </Badge>
         </div>
