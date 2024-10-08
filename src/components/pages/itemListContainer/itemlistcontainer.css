@@ -5,6 +5,9 @@ div h2 {
 
 .home {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin: 50px 0;
+    gap: 50px;
 }

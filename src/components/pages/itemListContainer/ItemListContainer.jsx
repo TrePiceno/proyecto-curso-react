@@ -1,20 +1,44 @@
-import ProductCard from "../../common/productCard/ProductCard";
-import "./itemlistcontainer.css";
+import { useState, useEffect } from "react";
+import { products } from "../../../productsMock";
+import ItemList from "./itemList";
+import { useParams } from "react-router-dom";
 
-const ItemListContainer = ({saludo}) => {
-    return (
-        <div>
-            <h2>{saludo}</h2>
-            <div className="home">
-            <ProductCard titulo="Laptop MSI Riader G378HX" precio="$59,999" />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            </div>
-        </div>
-    );
+const ItemListContainer = () => {
+
+    const { categoryName } = useParams();
+
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+
+        const filteredProducts = products.filter(
+            (product) => product.category === categoryName
+        );
+        
+        const getProducts = new Promise((res, rej) => {
+            let isLogued = true;
+            if (isLogued) {
+                res(categoryName ? filteredProducts : products);
+            } else {
+                rej ({message: "Algo salio mal"});
+            }
+        });
+    
+        getProducts
+            .then((response) => {
+                // console.log("Entro en el then", response);
+                setItems(response);
+            })
+            .catch((error) => {
+                console.log("Entro en el catch", error)
+            });
+    }, [categoryName]);
+    
+        let chilDrops = {
+            items
+        }
+
+    return <ItemList {...chilDrops} />
 };
 
 export default ItemListContainer;
