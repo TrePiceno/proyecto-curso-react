@@ -1,11 +1,11 @@
 import ProductCard from "../../common/productCard/ProductCard";
 import "./itemlistcontainer.css";
 
-const ItemList = ({saludo, items}) => {
+const ItemList = ({items}) => {
 
     return (
         <div>
-            <h2>Listado de productos</h2>
+            <h2>LISTADO DE PRODUCTOS</h2>
             <div className="home">
                 {items.map((item) => {
                     return (

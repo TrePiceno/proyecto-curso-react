@@ -13,13 +13,13 @@ const Navbar = () => {
                 </div>
             </Link>
             <div>
-            <ul>
-                {categories.map(({ title, path }) => (
-                <Link key={title} to={path}>
-                    {title}
-                </Link>
-                ))}
-            </ul>
+                <ul>
+                    {categories.map(({ title, path }) => (
+                    <Link key={title} to={path}>
+                        {title}
+                    </Link>
+                    ))}
+                </ul>
             </div>
             <Link to="/cart">
                 <div className="widget">

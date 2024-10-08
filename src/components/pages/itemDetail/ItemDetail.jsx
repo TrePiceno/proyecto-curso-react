@@ -1,7 +1,6 @@
 import CounterContainer from "../../common/counter/CounterContainer"
 import "./itemDetail.css";
 
-
 const ItemDetail = ({ item }) => {
 
     return (

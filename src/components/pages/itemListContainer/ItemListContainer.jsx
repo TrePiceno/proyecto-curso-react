@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 const ItemListContainer = () => {
 
     const { categoryName } = useParams();
-
     const [items, setItems] = useState([]);
 
     useEffect(() => {
@@ -26,14 +25,13 @@ const ItemListContainer = () => {
     
         getProducts
             .then((response) => {
-                // console.log("Entro en el then", response);
                 setItems(response);
             })
             .catch((error) => {
                 console.log("Entro en el catch", error)
             });
     }, [categoryName]);
-    
+
         let chilDrops = {
             items
         }

@@ -1,5 +1,5 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
-import "./productCard.css"
+// import "./productCard.css"
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ id, imageUrl, title, price, stock, description, category }) => {

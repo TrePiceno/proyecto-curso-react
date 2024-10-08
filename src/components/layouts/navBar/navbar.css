@@ -34,10 +34,11 @@
     font-size: 1.3rem;
     font-weight: bolder;
     font-family: 'Courier New';
+    color: black;
 }
 
-span {
-    text-decoration: none;
+.container .widget {
+    color: black;
 }
 
 @media (max-width: 560px) {
@@ -56,6 +57,5 @@ span {
     .container .widget {
         margin: 25px 0;
     }
-    
 
 }
