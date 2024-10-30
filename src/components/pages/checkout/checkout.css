@@ -1,0 +1,97 @@
+.formulario {
+    border-radius: 15px;
+    width: 600px;
+    height: 568px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 8px 8px 3px rgb(202, 202, 202);
+}
+
+.formulario video {
+    border-radius: 15px 0 0 15px;
+    width: 300px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 2rem;
+    width: 300px;
+    height: 568px;
+    border-radius: 0 15px 15px 0;
+    background-color: white;
+}
+
+.gif {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gif img {
+    filter: brightness(1.5);
+    mix-blend-mode: multiply;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+@media (max-width: 640px) {
+    .formulario {
+    width: 500px;
+    height: 473.36px;
+}
+
+.formulario video {
+    width: 250px;
+}
+
+.inputs {
+    width: 250px;
+    height: 473.36px;
+}
+}
+
+@media (max-width: 540px) {
+    .formulario {
+    width: 400px;
+    height: 378.69px;
+}
+
+.formulario video {
+    width: 200px;
+}
+
+.inputs {
+    width: 200px;
+    height: 378.69px;
+    gap: .6rem;
+}
+
+.gif img {
+    width: 400px;
+}
+}
+
+@media (max-width: 440px) {
+    .formulario {
+    width: 300px;
+    height: 400px;
+}
+
+.formulario video {
+    display: none;
+}
+
+.inputs {
+    width: 300px;
+    height: 400px ;
+    gap: .7rem;
+    border-radius: 15px;
+}
+
+.gif img {
+    width: 300px;
+}
+}

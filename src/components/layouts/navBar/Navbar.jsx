@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import CartWidget from "../../common/cartWidget/CartWidget";
 import "./navbar.css";
 import { categories } from "./categories";
+import { useContext } from "react";
+import { CartContext } from "../../../context/CartContext";
 
 const Navbar = () => {
+
+    const { cart } = useContext(CartContext);
     return (
         <div className="container">
             <Link to="/">
@@ -21,11 +25,19 @@ const Navbar = () => {
                     ))}
                 </ul>
             </div>
-            <Link to="/cart">
+            {cart.length > 0 ? (
+                <Link to="/cart">
                 <div className="widget">
                 <CartWidget />
                 </div>
             </Link>
+            ) : (
+                <Link >
+                <div className="widget">
+                <CartWidget />
+                </div>
+            </Link>
+            )}
         </div>
     );
 };

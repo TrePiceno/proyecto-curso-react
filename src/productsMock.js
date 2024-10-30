@@ -34,5 +34,5 @@ export const products = [
         stock: 10,
         description: "INTEL Core i3-1005G1 / Intel UHD Graphics / 4GB RAM / 500GB HDD / 14 HD LED / Windows 10 Pro / Teclado en español / 151D4LT",
         category: "Clásica"
-    },
+    }
 ];

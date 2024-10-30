@@ -4,21 +4,17 @@
     align-items: center;
     width: 80%;
     height: 80vh;
-    margin: 50px auto 0;
-    box-shadow: 5px 5px 5px rgb(202, 202, 202);
+    margin: 50px auto 50px;
+    box-shadow: 8px 8px 3px rgb(202, 202, 202);
     border: 1px solid rgb(192, 189, 189);
     border-radius: 10px;
     background-color: whitesmoke;
 }
 
-.itemDetail div {
-
-}
-
 .itemDetail .textDetail {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1rem;
     margin-right: 3rem;
 }
 
@@ -27,4 +23,25 @@
     filter: brightness(1.1);
     mix-blend-mode: multiply;
     margin-left: 1rem;
+}
+
+@media (max-width: 950px) {
+    .itemDetail {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 50px;
+        padding: 50px 0;
+    }
+
+    .itemDetail .textDetail {
+        margin-left: 3rem;
+    }
+
+    .itemDetail div img {
+        width: 60%;
+        filter: brightness(1.1);
+        mix-blend-mode: multiply;
+        margin-left: 18%;
+    }
 }

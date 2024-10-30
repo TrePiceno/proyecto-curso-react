@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ id, imageUrl, title, price, stock, description, category }) => {
 
     return (
-    <Card sx={{ width: 350, height: 650, position: "relative"}}>
+    <Card sx={{ width: 350, height: 650, position: "relative"}} style={{boxShadow: "8px 8px 3px rgb(202, 202, 202)"}}>
         <CardMedia
             sx={{ height: 350 }}
             image={imageUrl}
@@ -25,7 +25,7 @@ const ProductCard = ({ id, imageUrl, title, price, stock, description, category 
             </Typography>
         </CardContent>
         <CardActions sx={{position: "absolute", bottom: 10}}>
-            <Link to={`/productDetail/${id}`}><Button size="small">+ info</Button></Link>
+            <Link to={`/productDetail/${id}`}><Button size="small">Ir a detalle</Button></Link>
             <Link to={`/category/${category}`}><Button size="small">{category}</Button></Link>
         </CardActions>
     </Card>

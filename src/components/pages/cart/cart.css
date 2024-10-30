@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+.cardCart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto;
+    border: 1px rgb(204, 204, 204) solid;
+    border-radius: 15px;
+    background-color: rgb(255, 252, 252);
+    padding: 10px;
+    box-shadow: 8px 8px 3px rgb(202, 202, 202);
+}
+
+.resumen {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cardCart img {
+    height: 150px;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}

@@ -1,21 +1,29 @@
 import React, { useState } from "react";
 import Counter from "./Counter";
 
-const CounterContainer = () => {
-    const [contador, setContador] = useState(1);
+const CounterContainer = ({ onAdd, stock, totalProductos }) => {
+    const [contador, setContador] = useState(totalProductos);
 
     const sumar = () => {
-        setContador(contador + 1);
+        if (contador < stock) {
+            setContador(contador + 1);
+        } else {
+            alert("Stock máximo alcanzado")
+        }
     };
 
     const restar = () => {
-        setContador(contador - 1);
+        if (contador > 1) {
+            setContador(contador - 1);
+        }
+        
     };
 
     let childProps = {
         contador,
         sumar,
         restar,
+        onAdd
     };
 
     return <Counter {...childProps} />;
